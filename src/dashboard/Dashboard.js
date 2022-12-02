@@ -8,7 +8,7 @@ import { FaSearch } from "react-icons/fa";
 import { BiGitCompare } from "react-icons/bi";
 import { SiBloglovin } from "react-icons/si";
 import { BiMessageRoundedDetail } from "react-icons/bi";
-import { FiSend } from "react-icons/fi";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa";
 import { ImHome } from "react-icons/im";
 import { BsBagCheckFill } from "react-icons/bs";
@@ -17,19 +17,11 @@ import { BsBellFill } from "react-icons/bs";
 import { FaCogs } from "react-icons/fa";
 import { BiChevronDownSquare } from "react-icons/bi";
 
-
-
-
 import { Link, Outlet } from "react-router-dom";
-
 
 import { FcTodoList } from "react-icons/fc";
 
-
-
-
 const navigation = [
- 
   {
     name: "Dashboard",
     to: "/dashboard/userProfile",
@@ -37,13 +29,13 @@ const navigation = [
     current: false,
   },
 
-  { name: "Post", to: "/dashboard/post", icon: FiSend, current: false },
-  // {
-  //   name: "Checkout ",
-  //   to: "/dashboard/checkout",
-  //   icon: BsBagCheckFill,
-  //   current: false,
-  // },
+  { name: "Customer", to: "/dashboard/customer", icon: AiOutlineUsergroupAdd, current: false },
+  {
+    name: "Product ",
+    to: "/dashboard/checkout",
+    icon: BsBagCheckFill,
+    current: false,
+  },
 
   // {
   //   name: "My User List",
@@ -71,8 +63,6 @@ const navigation = [
     icon: BiGitCompare,
     current: false,
   },
-
-
 
   {
     name: "Blog",
@@ -133,13 +123,6 @@ function classNames(...classes) {
 }
 
 const Dashboard = () => {
- 
-
-
-  
-
- 
-
   // useEffect(() => {
   //   setToken(localStorage.getItem("token"));
   //   // setEmail(localStorage.getItem("user"));
@@ -150,8 +133,6 @@ const Dashboard = () => {
     window.scrollTo(0, 0);
   }, []);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
- 
 
   return (
     <>
@@ -218,16 +199,14 @@ const Dashboard = () => {
                     </div>
                   </Transition.Child>
                   <div className="flex flex-shrink-0 items-center px-4">
-                    
-                   <Link to='/' className="cursor-pointer"> <img style={{width:"60%"}}
-                      className="h-8 w-auto rounded-full"
-                      src="https://templates.iqonic.design/datum/html/assets/images/logo.png"
-                      alt="Easywire logo"
-
-
-
-         
-                    />
+                    <Link to="/" className="cursor-pointer">
+                      {" "}
+                      <img
+                        style={{ width: "60%" }}
+                        className="h-8 w-auto rounded-full"
+                        src="https://templates.iqonic.design/datum/html/assets/images/logo.png"
+                        alt="Easywire logo"
+                      />
                     </Link>
                   </div>
                   <nav
@@ -235,7 +214,7 @@ const Dashboard = () => {
                     aria-label="Sidebar"
                   >
                     <div className="space-y-1 px-2">
-                      { navigation.map((item) => (
+                      {navigation.map((item) => (
                         <Link
                           key={item.name}
                           to={item.to}
@@ -254,8 +233,6 @@ const Dashboard = () => {
                           {item.name}
                         </Link>
                       ))}
-
-                     
                     </div>
                     <div className="mt-6 pt-6">
                       <div className="space-y-1 px-2">
@@ -291,15 +268,15 @@ const Dashboard = () => {
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex flex-grow flex-col overflow-y-auto bg-[#0c2556] pt-5 pb-4">
             <div className="flex flex-shrink-0 items-center px-4 ">
-             <Link className="cursor-pointer flex" to="/">
-             <img
-                className="h-10 w-auto"
-                style={{width:"100%"}}
-                src="https://templates.iqonic.design/datum/html/assets/images/logo.png"
-                alt="Easywire logo"
-              />
-              <p className="font-bold ml-2 text-white mt-2">Datum</p>
-             </Link>
+              <Link className="cursor-pointer flex" to="/">
+                <img
+                  className="h-10 w-auto"
+                  style={{ width: "100%" }}
+                  src="https://templates.iqonic.design/datum/html/assets/images/logo.png"
+                  alt="Easywire logo"
+                />
+                <p className="font-bold ml-2 text-white mt-2">Datum</p>
+              </Link>
             </div>
             <nav
               className="mt-5 flex flex-1 flex-col divide-y divide-cyan-800 overflow-y-auto"
@@ -325,8 +302,6 @@ const Dashboard = () => {
                     {item.name}
                   </Link>
                 ))}
-
-
               </div>
               <div className="mt-6 pt-6">
                 <div className="space-y-1 px-2">
@@ -377,7 +352,6 @@ const Dashboard = () => {
                         aria-hidden="true"
                       />
                     </div>
-                    
                   </div>
                 </form>
               </div>
@@ -395,12 +369,14 @@ const Dashboard = () => {
                     >
                       {/* {allChakout.length} */}
                     </div>
-                    <BsBellFill className="h-5 w-5 py-auto mt-6" aria-hidden="true">
+                    <BsBellFill
+                      className="h-5 w-5 py-auto mt-6"
+                      aria-hidden="true"
+                    >
                       {" "}
                     </BsBellFill>
                   </button>
                 </Link>
-
 
                 <Menu as="div" className="relative ml-3">
                   <div>
@@ -411,10 +387,7 @@ const Dashboard = () => {
                         src="https://templates.iqonic.design/datum/html/assets/images/Flag/flag001.png"
                         alt=""
                       />
-                      <span className="ml-3 hidden text-sm font-medium text-gray-700 lg:block">
-                        
-                      
-                      </span>
+                      <span className="ml-3 hidden text-sm font-medium text-gray-700 lg:block"></span>
                       {/* <BiChevronDownSquare
                         className="ml-1 hidden h-5 w-5 flex-shrink-0 text-gray-400 lg:block"
                         aria-hidden="true"
@@ -474,7 +447,6 @@ const Dashboard = () => {
                     </Menu.Items>
                   </Transition>
                 </Menu>
-
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">

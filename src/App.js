@@ -6,6 +6,8 @@ import Home from "./Components/Home/Home";
 import ContractUs from "./Components/Contract/ContractUs";
 import Dashboard from "./dashboard/Dashboard";
 import DashbordHome from "./dashboard/DashbordHome";
+import Customer from "./dashboard/Customer/Customer";
+import AddCustomaer from "./dashboard/Customer/AddCustomaer";
 
 function App() {
   return (
@@ -22,6 +24,14 @@ function App() {
             <Route
               path="userProfile"
               element={<DashbordHome></DashbordHome>}
+            ></Route>
+            <Route
+              path="customer"
+              element={<Customer></Customer>}
+            ></Route>
+            <Route
+              path="addCustomer"
+              element={<AddCustomaer></AddCustomaer>}
             ></Route>
 
             {/* <Route

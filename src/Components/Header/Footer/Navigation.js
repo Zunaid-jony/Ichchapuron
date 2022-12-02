@@ -56,7 +56,7 @@ const Navigation = () => {
             Contact
           </NavLink>
 
-          <NavLink to="/dashboard" className="p-4 hover:text-[#61dafb]">
+          <NavLink to="/dashboard/userProfile" className="p-4 hover:text-[#61dafb]">
             Dashboard
           </NavLink>
         </ul>
