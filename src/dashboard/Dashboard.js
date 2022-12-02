@@ -349,8 +349,9 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="flex flex-1 flex-col lg:pl-64">
-          <div className="flex h-16 flex-shrink-0 border-b border-gray-200 bg-white lg:border-none">
+        <div className="flex  flex-1 flex-col lg:pl-64">
+          {/* fixed top-0 left-0 right-0 */}
+          <div className="flex  h-16 flex-shrink-0 border-b border-gray-200 bg-white lg:border-none ">
             <button
               type="button"
               className="border-r border-gray-200 px-4 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 lg:hidden"
@@ -478,7 +479,7 @@ const Dashboard = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 lg:rounded-md lg:p-2 lg:hover:bg-gray-50">
+                    <Menu.Button className="flex  max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 lg:rounded-md lg:p-2 lg:hover:bg-gray-50">
                       <img
                         className="h-10 w-10 rounded-full"
                         // src={currentUser?.photoURL}

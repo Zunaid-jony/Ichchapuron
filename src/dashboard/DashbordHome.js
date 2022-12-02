@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   PieChart,
   Pie,
@@ -12,6 +12,16 @@ import {
 } from "recharts";
 import { SlCalender } from "react-icons/sl";
 import { BiDotsHorizontalRounded } from "react-icons/bi";
+import { Menu, Transition } from "@headlessui/react";
+import { Link } from "react-router-dom";
+import { FiEdit } from "react-icons/fi";
+import { GrView } from "react-icons/gr";
+import { AiFillDelete } from "react-icons/ai";
+import Tebile from "./Tebile";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 const DashbordHome = () => {
   const data = [
@@ -182,24 +192,18 @@ const DashbordHome = () => {
       <div className="grid md:grid-cols-3 mt-6 gap-6 ">
         <div className="col-span-2  ">
           <div className="grid md:grid-cols-2 gap-6 mt-6">
-           <div>
-           <div className="flex bg-[#3378ff] rounded-md gap-6 p-4">
-              <img src="https://i.ibb.co/CVx8VvP/Capture.png" alt="" />
-              <div>
-                <p className="text-xl font-bold ml-3 mt-3 text-left">
-                  1,860 / <span>3k Target</span>
-                </p>
-                <p>Order In Period</p>
-              </div>
-            </div>
             <div>
-              
-
-
-
-
-
-            <div className="ml-auto mr-auto  m-2  overflow-hidden container mt-6 bg-white shadow-md p-2 mb-2">
+              <div className="flex bg-[#3378ff] rounded-md gap-6 p-4">
+                <img src="https://i.ibb.co/CVx8VvP/Capture.png" alt="" />
+                <div>
+                  <p className="text-xl font-bold ml-3 mt-3 text-left">
+                    1,860 / <span>3k Target</span>
+                  </p>
+                  <p>Order In Period</p>
+                </div>
+              </div>
+              <div>
+                <div className="ml-auto mr-auto  m-2  overflow-hidden container mt-6 bg-white shadow-md p-2 mb-2">
                   <BarChart
                     width={460}
                     height={300}
@@ -228,18 +232,93 @@ const DashbordHome = () => {
                     />
                   </BarChart>
                 </div>
+              </div>
             </div>
-           </div>
-
-
-
 
             <div className="bg-white shadow-md md:row-span-1 text-left overflow-x-scroll rounded-md">
-              <p className="p-6 justify-between flex ">Upcoming Events <span className=" cursor-pointer"><BiDotsHorizontalRounded></BiDotsHorizontalRounded></span>
-              
-              
-              
-              
+              <p className="p-6 justify-between flex text-2xl font-bold ">
+                Upcoming Events
+                <span className=" cursor-pointer"></span>
+                <Menu as="div" className="relative ml-3">
+                  <div>
+                    <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none ">
+                      <span className="ml-3 hidden text-xl font-medium text-gray-700 lg:block">
+                        <BiDotsHorizontalRounded></BiDotsHorizontalRounded>
+                      </span>
+                      {/* <BiChevronDownSquare
+                        className="ml-1 hidden h-5 w-5 flex-shrink-0 text-gray-400 lg:block"
+                        aria-hidden="true"
+                      /> */}
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            // to="/dashboard/userProfile"
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
+                          >
+                            <p className="flex ">
+                              <span className=" text-xl">
+                                <FiEdit></FiEdit>
+                              </span>{" "}
+                              <span className="ml-4 ">Edit</span>
+                            </p>
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            // to="//dashboard/settings"
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
+                          >
+                            <p className="flex ">
+                              <span className=" text-xl">
+                                <GrView></GrView>
+                              </span>{" "}
+                              <span className="ml-4 ">View</span>
+                            </p>
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            // onClick={logout}
+                            to="/login"
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
+                          >
+                            <p className="flex ">
+                              <span className=" text-xl">
+                                <AiFillDelete></AiFillDelete>
+                              </span>{" "}
+                              <span className="ml-4 ">Delete</span>
+                            </p>
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
               </p>
               <hr />
               <div>
@@ -281,43 +360,156 @@ const DashbordHome = () => {
                     <SlCalender></SlCalender>
                   </span>{" "}
                   <span className="text-gray-500">30 JUN, </span> TUE Big
-                  Billion Day SaleTUE 
+                  Billion Day SaleTUE
                 </p>
                 <hr />
               </div>
 
               <div>
                 <p className="justify-between flex p-5">
-                  <span className="text-gray-300 md:ml-2 mt-1">
+                  <span className=" text-gray-300 md:ml-2 mt-1">
                     <SlCalender></SlCalender>
                   </span>{" "}
                   <span className="text-gray-500">30 JUN, </span> TUE Big
                   Billion Day Sale
                 </p>
                 <hr />
+                <div className="grid grid-cols-3">
+                  <p></p>
+                  <p></p>
+                  <p className="bg-[#778aae] rounded-md p-2 text-right  right-0  w-20 ml-5 mt-1">
+                    {" "}
+                    See All
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className=" mt-6 bg-white shadow-md rounded-md" >
-          <p className="text-2xl font-bold">
-          Popular Categories
-          </p>
-           <div>
-                  <PieChart width={300} height={350}>
-                    <Pie
-                      dataKey="users"
-                      isAnimationActive={false}
-                      data={data}
-                      cx={200}
-                      cy={200}
-                      outerRadius={80}
-                      fill="#8884d8"
-                      label
-                    />
-                    <Tooltip />
-                  </PieChart>
-                </div>
+        <div className=" mt-6 bg-white shadow-md rounded-md">
+          <p className="text-2xl font-bold mt-6">Popular Categories</p>
+          <div>
+            <PieChart width={300} height={350}>
+              <Pie
+                dataKey="users"
+                isAnimationActive={false}
+                data={data}
+                cx={200}
+                cy={200}
+                outerRadius={80}
+                fill="#8884d8"
+                label
+              />
+              <Tooltip />
+            </PieChart>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-3 mt-6 gap-6">
+        {/* md:row-span-3 */}
+        <div className=" md:col-span-2  bg-white shadow-md p-2">
+          <div className="flex justify-between mt-2">
+            <p className="text-2xl font-bold"> New Customer </p>
+
+            <Menu as="div" className="relative ml-3">
+              <div>
+                <Menu.Button className="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none ">
+                  <span className="ml-3 mt-2 hidden text-xl font-medium text-gray-700 lg:block">
+                    <BiDotsHorizontalRounded></BiDotsHorizontalRounded>
+                  </span>
+                  {/* <BiChevronDownSquare
+              className="ml-1 hidden h-5 w-5 flex-shrink-0 text-gray-400 lg:block"
+              aria-hidden="true"
+            /> */}
+                </Menu.Button>
+              </div>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link
+                        // to="/dashboard/userProfile"
+                        className={classNames(
+                          active ? "bg-gray-100" : "",
+                          "block px-4 py-2 text-sm text-gray-700"
+                        )}
+                      >
+                        <p className="flex ">
+                          <span className=" text-xl">
+                            <FiEdit></FiEdit>
+                          </span>{" "}
+                          <span className="ml-4 ">Edit</span>
+                        </p>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link
+                        // to="//dashboard/settings"
+                        className={classNames(
+                          active ? "bg-gray-100" : "",
+                          "block px-4 py-2 text-sm text-gray-700"
+                        )}
+                      >
+                        <p className="flex ">
+                          <span className=" text-xl">
+                            <GrView></GrView>
+                          </span>{" "}
+                          <span className="ml-4 ">View</span>
+                        </p>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link
+                        // onClick={logout}
+                        to="/login"
+                        className={classNames(
+                          active ? "bg-gray-100" : "",
+                          "block px-4 py-2 text-sm text-gray-700"
+                        )}
+                      >
+                        <p className="flex ">
+                          <span className=" text-xl">
+                            <AiFillDelete></AiFillDelete>
+                          </span>{" "}
+                          <span className="ml-4 ">Delete</span>
+                        </p>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          
+          </div>
+          <Tebile></Tebile>
+        </div>
+        <div className="md:row-span-1 bg-white shadow-md">
+          <p className="text-2xl font-bold mt-6">City Orders Statistics</p>
+
+          <div>
+          <iframe className="w-full" style={{height:'500px',borderRadius:'10px',borderColor:'black'}} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=485&amp;height=956&amp;hl=en&amp;q=dhanmondi&amp;t=&amp;z=7&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+          </div>
+
+
+
+          {/* <iframe className="w-full" style={{height:'500px',borderRadius:'10px',borderColor:'black'}}
+     src="https://maps.google.com/maps?q=Jamuna%20Future%20Park,%20Dhaka&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe> */}
+         
+          
         </div>
       </div>
     </div>
