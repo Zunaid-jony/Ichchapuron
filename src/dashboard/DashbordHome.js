@@ -10,16 +10,18 @@ import {
   CartesianGrid,
   Bar,
 } from "recharts";
+import { SlCalender } from "react-icons/sl";
+import { BiDotsHorizontalRounded } from "react-icons/bi";
 
 const DashbordHome = () => {
-    const data = [
-        { name: "July", users: 200000000 },
-        { name: "August", users: 150000000 },
-        { name: "September", users: 100000000 },
-        { name: "October", users: 500000000 },
-      ];
+  const data = [
+    { name: "July", users: 200000000 },
+    { name: "August", users: 150000000 },
+    { name: "September", users: 100000000 },
+    { name: "October", users: 500000000 },
+  ];
   return (
-    <div className=" mt-8 container ml-auto mr-auto px-6">
+    <div className=" mt-8 container ml-auto mr-auto md:px-6 p-2">
       <div className="flex justify-between container ">
         <p className="text-xl font-bold text-[#213446]">Overview</p>
 
@@ -50,9 +52,9 @@ const DashbordHome = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 mt-6 gap-6">
+      <div className="grid md:grid-cols-3 mt-6 gap-6 ">
         <div className="col-span-2 ">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 ml-auto mr-auto m-2">
             <div className="bg-white shadow-md rounded-md p-2  border-t-2 border-[#0ee0a1]">
               <p className=" text-gray-400">Total Profit</p>
 
@@ -79,64 +81,65 @@ const DashbordHome = () => {
             </div>
           </div>
 
-
-
-
-          <div className="mt-6 bg-white shadow-md rounded-md">
+          <div className="mt-6 bg-white shadow-md rounded-md h-80">
             <div style={{ textAlign: "center" }}>
-      <h1 className="mt-10 text-xl font-bold">View User Graph</h1>
-      <div className="grid md:grid-cols-2 mt-10 p-4 ml-auto mr-auto overflow-hidden">
-        <div>
-          <PieChart width={400} height={400}>
-            <Pie
-              dataKey="users"
-              isAnimationActive={false}
-              data={data}
-              cx={200}
-              cy={200}
-              outerRadius={80}
-              fill="#8884d8"
-              label
-            />
-            <Tooltip />
-          </PieChart>
-        </div>
-        <div className="ml-auto mr-auto  m-2  overflow-hidden container ">
-          <BarChart
-            width={460}
-            height={300}
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-             
-              bottom: 5,
-            }}
-            barSize={20}
-          >
-            <XAxis
-              dataKey="name"
-              scale="point"
-              padding={{ left: 10, right: 10 }}
-            />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <CartesianGrid strokeDasharray="3 3" />
-            <Bar dataKey="users" fill="#8884d8" background={{ fill: "#eee" }} />
-          </BarChart>
-        </div>
-      </div>
-    </div>
+              {/* <h1 className="mt-10 text-xl font-bold">View User Graph</h1> */}
+              <div className=" mt-10 p-4 ml-auto mr-auto ">
+                {/* <div>
+                  <PieChart width={400} height={400}>
+                    <Pie
+                      dataKey="users"
+                      isAnimationActive={false}
+                      data={data}
+                      cx={200}
+                      cy={200}
+                      outerRadius={80}
+                      fill="#8884d8"
+                      label
+                    />
+                    <Tooltip />
+                  </PieChart>
+                </div> */}
+                <div className="ml-auto mr-auto  m-2  overflow-hidden container ">
+                  <BarChart
+                    width={460}
+                    height={300}
+                    data={data}
+                    margin={{
+                      top: 5,
+                      right: 30,
+
+                      bottom: 5,
+                    }}
+                    barSize={20}
+                  >
+                    <XAxis
+                      dataKey="name"
+                      scale="point"
+                      padding={{ left: 10, right: 10 }}
+                    />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <Bar
+                      dataKey="users"
+                      fill="#8884d8"
+                      background={{ fill: "#eee" }}
+                    />
+                  </BarChart>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="row-span-3 bg-white shadow-md rounded-md">
+        <div className="md:row-span-1 bg-white shadow-md rounded-md  w-full">
           <p className="text-2xl font-bold mb-1 mt-1 text-left ml-2 p-2">
             Top Selling Product
           </p>
           <hr />
 
-          <div className="grid grid-cols-4 gap-2 py-auto p-2">
+          <div className="grid grid-cols-4 gap-2 py-auto p-4 w-full">
             <img
               src="https://templates.iqonic.design/datum/html/assets/images/products/1.jpg"
               alt=""
@@ -173,7 +176,148 @@ const DashbordHome = () => {
             <p className="font-bold col-span-2 mt-4">Ryzen 5 Hexa Core 5600H</p>
             <p className="font-bold mt-4">$1,056</p>
           </div>
-          <hr />
+          {/* <hr className="" /> */}
+        </div>
+      </div>
+      <div className="grid md:grid-cols-3 mt-6 gap-6 ">
+        <div className="col-span-2  ">
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+           <div>
+           <div className="flex bg-[#3378ff] rounded-md gap-6 p-4">
+              <img src="https://i.ibb.co/CVx8VvP/Capture.png" alt="" />
+              <div>
+                <p className="text-xl font-bold ml-3 mt-3 text-left">
+                  1,860 / <span>3k Target</span>
+                </p>
+                <p>Order In Period</p>
+              </div>
+            </div>
+            <div>
+              
+
+
+
+
+
+            <div className="ml-auto mr-auto  m-2  overflow-hidden container mt-6 bg-white shadow-md p-2 mb-2">
+                  <BarChart
+                    width={460}
+                    height={300}
+                    data={data}
+                    margin={{
+                      top: 5,
+                      right: 30,
+
+                      bottom: 5,
+                    }}
+                    barSize={20}
+                  >
+                    <XAxis
+                      dataKey="name"
+                      scale="point"
+                      padding={{ left: 10, right: 10 }}
+                    />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <Bar
+                      dataKey="users"
+                      fill="#8884d8"
+                      background={{ fill: "#eee" }}
+                    />
+                  </BarChart>
+                </div>
+            </div>
+           </div>
+
+
+
+
+            <div className="bg-white shadow-md md:row-span-1 text-left overflow-x-scroll rounded-md">
+              <p className="p-6 justify-between flex ">Upcoming Events <span className=" cursor-pointer"><BiDotsHorizontalRounded></BiDotsHorizontalRounded></span>
+              
+              
+              
+              
+              </p>
+              <hr />
+              <div>
+                <p className="justify-between flex p-5">
+                  <span className="text-gray-300 md:ml-2 mt-1">
+                    <SlCalender></SlCalender>
+                  </span>{" "}
+                  <span className="text-gray-500">30 JUN, </span> TUE Big
+                  Billion Day Sale
+                </p>
+                <hr />
+              </div>
+
+              <div>
+                <p className="justify-between flex p-5">
+                  <span className="text-gray-300 md:ml-2 mt-1">
+                    <SlCalender></SlCalender>
+                  </span>{" "}
+                  <span className="text-gray-500">30 JUN, </span> TUE Big
+                  Billion Day Sale
+                </p>
+                <hr />
+              </div>
+
+              <div>
+                <p className="justify-between flex p-5">
+                  <span className="text-gray-300 md:ml-2 mt-1">
+                    <SlCalender></SlCalender>
+                  </span>{" "}
+                  <span className="text-gray-500">30 JUN, </span> TUE Big
+                  Billion Day Sale
+                </p>
+                <hr />
+              </div>
+
+              <div>
+                <p className="justify-between flex p-5">
+                  <span className="text-gray-300 md:ml-2 mt-1">
+                    <SlCalender></SlCalender>
+                  </span>{" "}
+                  <span className="text-gray-500">30 JUN, </span> TUE Big
+                  Billion Day SaleTUE 
+                </p>
+                <hr />
+              </div>
+
+              <div>
+                <p className="justify-between flex p-5">
+                  <span className="text-gray-300 md:ml-2 mt-1">
+                    <SlCalender></SlCalender>
+                  </span>{" "}
+                  <span className="text-gray-500">30 JUN, </span> TUE Big
+                  Billion Day Sale
+                </p>
+                <hr />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=" mt-6 bg-white shadow-md rounded-md" >
+          <p className="text-2xl font-bold">
+          Popular Categories
+          </p>
+           <div>
+                  <PieChart width={300} height={350}>
+                    <Pie
+                      dataKey="users"
+                      isAnimationActive={false}
+                      data={data}
+                      cx={200}
+                      cy={200}
+                      outerRadius={80}
+                      fill="#8884d8"
+                      label
+                    />
+                    <Tooltip />
+                  </PieChart>
+                </div>
         </div>
       </div>
     </div>
