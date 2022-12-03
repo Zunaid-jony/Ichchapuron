@@ -32,7 +32,7 @@ const navigation = [
   { name: "Customer", to: "/dashboard/customer", icon: AiOutlineUsergroupAdd, current: false },
   {
     name: "Product ",
-    to: "/dashboard/checkout",
+    to: "/dashboard/product",
     icon: AiFillTag,
     current: false,
   },

@@ -9,6 +9,8 @@ import DashbordHome from "./dashboard/DashbordHome";
 import Customer from "./dashboard/Customer/Customer";
 import AddCustomaer from "./dashboard/Customer/AddCustomaer";
 import CustomarTwo from "./dashboard/Customer/CustomarTwo";
+import Product from "./dashboard/Product/Product";
+import AddProdcut from "./dashboard/Product/AddProdcut";
 
 function App() {
   return (
@@ -37,6 +39,14 @@ function App() {
             <Route
               path="Customer"
               element={<CustomarTwo></CustomarTwo>}
+            ></Route>
+            <Route
+              path="product"
+              element={<Product></Product>}
+            ></Route>
+            <Route
+              path="addProduct"
+              element={<AddProdcut></AddProdcut>}
             ></Route>
 
             {/* <Route

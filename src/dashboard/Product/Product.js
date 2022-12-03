@@ -5,116 +5,107 @@ import { FiEdit } from "react-icons/fi";
 import { GrView } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
-const Product = [
+const people = [
   {
-    name: "Christian Bale",
+    name: "360 Deg 1080p Security Camera",
+    title: "Front-end Developer",
+    department: "Optimization",
+    email: "lindsay.walton@example.com",
+    phone: "01627392810",
+    role: "Wifi Smart",
+    image:
+      "https://templates.iqonic.design/datum/html/assets/images/products/2.jpg",
+  },
+  {
+    name: "Airpods With Wireless Charging Case",
     title: "Front-end Developer",
     department: "Optimization",
     email: "lindsay.walton@example.com",
     phone: "01627392810",
     role: "Member",
     image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/1.jpg",
+      "https://templates.iqonic.design/datum/html/assets/images/products/16.jpg",
   },
   {
-    name: "Matt Damon",
+    name: "Bassheads 220 Wired Headset",
     title: "Front-end Developer",
     department: "Optimization",
     email: "lindsay.walton@example.com",
     phone: "01627392810",
     role: "Member",
     image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/2.jpg",
+      "https://templates.iqonic.design/datum/html/assets/images/products/1.jpg",
   },
   {
-    name: "Christian Bale",
+    name: "360 Deg 1080p Security Camera",
+    title: "Front-end Developer",
+    department: "Optimization",
+    email: "lindsay.walton@example.com",
+    phone: "01627392810",
+    role: "Wifi Smart",
+    image:
+      "https://templates.iqonic.design/datum/html/assets/images/products/2.jpg",
+  },
+  {
+    name: "Airpods With Wireless Charging Case",
     title: "Front-end Developer",
     department: "Optimization",
     email: "lindsay.walton@example.com",
     phone: "01627392810",
     role: "Member",
     image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/1.jpg",
+      "https://templates.iqonic.design/datum/html/assets/images/products/16.jpg",
   },
   {
-    name: "Matt Damon",
+    name: "Bassheads 220 Wired Headset",
     title: "Front-end Developer",
     department: "Optimization",
     email: "lindsay.walton@example.com",
     phone: "01627392810",
     role: "Member",
     image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/2.jpg",
+      "https://templates.iqonic.design/datum/html/assets/images/products/1.jpg",
   },
   {
-    name: "Christian Bale",
+    name: "360 Deg 1080p Security Camera",
+    title: "Front-end Developer",
+    department: "Optimization",
+    email: "lindsay.walton@example.com",
+    phone: "01627392810",
+    role: "Wifi Smart",
+    image:
+      "https://templates.iqonic.design/datum/html/assets/images/products/2.jpg",
+  },
+  {
+    name: "Airpods With Wireless Charging Case",
     title: "Front-end Developer",
     department: "Optimization",
     email: "lindsay.walton@example.com",
     phone: "01627392810",
     role: "Member",
     image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/1.jpg",
+      "https://templates.iqonic.design/datum/html/assets/images/products/16.jpg",
   },
   {
-    name: "Matt Damon",
+    name: "Bassheads 220 Wired Headset",
     title: "Front-end Developer",
     department: "Optimization",
     email: "lindsay.walton@example.com",
     phone: "01627392810",
     role: "Member",
     image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/2.jpg",
+      "https://templates.iqonic.design/datum/html/assets/images/products/1.jpg",
   },
-  {
-    name: "Christian Bale",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    phone: "01627392810",
-    role: "Member",
-    image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/1.jpg",
-  },
-  {
-    name: "Matt Damon",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    phone: "01627392810",
-    role: "Member",
-    image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/2.jpg",
-  },
-  {
-    name: "Christian Bale",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    phone: "01627392810",
-    role: "Member",
-    image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/1.jpg",
-  },
-  {
-    name: "Matt Damon",
-    title: "Front-end Developer",
-    department: "Optimization",
-    email: "lindsay.walton@example.com",
-    phone: "01627392810",
-    role: "Member",
-    image:
-      "https://templates.iqonic.design/datum/html/assets/images/user/2.jpg",
-  },
+
   // More people...
 ];
 
-const Customer = () => {
+const Product = () => {
   return (
     <div>
       <div className="px-4 sm:px-6 lg:px-8 mt-10">
         <div className="sm:flex sm:items-center  justify-between">
-          <h1 className="text-xl font-semibold text-gray-900">Customer</h1>
+          <h1 className="text-xl font-semibold text-gray-900">Product</h1>
 
           <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none flex">
             <form className="mr-2">
@@ -151,17 +142,17 @@ const Customer = () => {
                 />
               </div>
             </form>
-            <Link to="/dashboard/addCustomer">
+            <Link to="/dashboard/addProduct">
               <button
                 type="button"
                 className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto py-4"
               >
-                Add Customer
+                Add product
               </button>
             </Link>
           </div>
         </div>
-        <div className="mt-8 flex flex-col snap-x">
+        <div className="mt-8 flex flex-col snap-x text-left">
           <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
               <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
@@ -172,29 +163,13 @@ const Customer = () => {
                         scope="col"
                         className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                       >
-                        <div className="flex items-center">
-                          <input
-                            id="remember-me"
-                            name="remember-me"
-                            type="checkbox"
-                            className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                          />
-                        </div>
-                      </th>
-                      <th
-                        scope="col"
-                        className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
-                      >
                         <p className="flex">
                           {" "}
-                          Name{" "}
+                          Product Name
                           <span className=" ml-2 cursor-pointer">
-                            <Link  to="/dashboard/Customer"> 
-                           
-                            <BsArrowDownUp></BsArrowDownUp>
-                            
+                            <Link to="/dashboard/Customer">
+                              <BsArrowDownUp></BsArrowDownUp>
                             </Link>
-                          
                           </span>
                         </p>
                       </th>
@@ -203,30 +178,11 @@ const Customer = () => {
                         className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
                       >
                         <p className="flex">
-                          Email{" "}
+                          Category
                           <span className=" ml-2 cursor-pointer">
-                          <Link  to="/dashboard/Customer"> 
-                           
-                           <BsArrowDownUp></BsArrowDownUp>
-                           
-                           </Link>
-                          </span>
-                        </p>
-                      </th>
-                      <th
-                        scope="col"
-                        className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
-                      >
-                        <p className="flex">
-                          {" "}
-                          Location{" "}
-                          <span className=" ml-2 cursor-pointer">
-                          <Link  to="/dashboard/Customer"> 
-                           
-                           <BsArrowDownUp></BsArrowDownUp>
-                           
-                           </Link>
-                           
+                            <Link to="/dashboard/Customer">
+                              <BsArrowDownUp></BsArrowDownUp>
+                            </Link>
                           </span>
                         </p>
                       </th>
@@ -236,14 +192,25 @@ const Customer = () => {
                       >
                         <p className="flex">
                           {" "}
-                          Phone{" "}
+                          Price
                           <span className=" ml-2 cursor-pointer">
-                            
-                          <Link  to="/dashboard/Customer"> 
-                           
-                           <BsArrowDownUp></BsArrowDownUp>
-                           
-                           </Link>
+                            <Link to="/dashboard/Customer">
+                              <BsArrowDownUp></BsArrowDownUp>
+                            </Link>
+                          </span>
+                        </p>
+                      </th>
+                      <th
+                        scope="col"
+                        className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      >
+                        <p className="flex">
+                          {" "}
+                          Quantity
+                          <span className=" ml-2 cursor-pointer">
+                            <Link to="/dashboard/Customer">
+                              <BsArrowDownUp></BsArrowDownUp>
+                            </Link>
                           </span>
                         </p>
                       </th>
@@ -258,19 +225,9 @@ const Customer = () => {
                   <tbody className="divide-y divide-gray-200 bg-white">
                     {people.map((person) => (
                       <tr key={person.email}>
-                        <td>
-                          <div className="flex items-center ml-6">
-                            <input
-                              id="remember-me"
-                              name="remember-me"
-                              type="checkbox"
-                              className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                            />
-                          </div>
-                        </td>
                         <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                           <div className="flex items-center">
-                            <div className="h-10 w-10 flex-shrink-0">
+                            <div className="h-12 w-12 flex-shrink-0">
                               <img
                                 className="h-10 w-10 rounded-full"
                                 src={person.image}
@@ -336,7 +293,7 @@ const Customer = () => {
 
       {/* pagination */}
 
-      <div class="flex flex-col items-center justify-between">
+      <div class="flex flex-col items-center justify-between ml-auto mr-auto">
         <div className="left-0">
           <span class="text-sm text-gray-700 dark:text-gray-400">
             Showing{" "}
@@ -348,6 +305,7 @@ const Customer = () => {
             Entries
           </span>
         </div>
+
         <div class="inline-flex mt-2 xs:mt-0">
           <button class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
             <svg
@@ -365,6 +323,7 @@ const Customer = () => {
             </svg>
             Prev
           </button>
+          <button className="bg-indigo-600 px-2">1</button>
           <button class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
             Next
             <svg
