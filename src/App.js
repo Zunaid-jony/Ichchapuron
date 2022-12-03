@@ -8,6 +8,7 @@ import Dashboard from "./dashboard/Dashboard";
 import DashbordHome from "./dashboard/DashbordHome";
 import Customer from "./dashboard/Customer/Customer";
 import AddCustomaer from "./dashboard/Customer/AddCustomaer";
+import CustomarTwo from "./dashboard/Customer/CustomarTwo";
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
             <Route
               path="addCustomer"
               element={<AddCustomaer></AddCustomaer>}
+            ></Route>
+            <Route
+              path="Customer"
+              element={<CustomarTwo></CustomarTwo>}
             ></Route>
 
             {/* <Route

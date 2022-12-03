@@ -5,7 +5,7 @@ import { FiEdit } from "react-icons/fi";
 import { GrView } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
-const people = [
+const Product = [
   {
     name: "Christian Bale",
     title: "Front-end Developer",
@@ -387,4 +387,4 @@ const Customer = () => {
   );
 };
 
-export default Customer;
+export default Product;

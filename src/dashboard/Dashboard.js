@@ -11,7 +11,7 @@ import { BiMessageRoundedDetail } from "react-icons/bi";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa";
 import { ImHome } from "react-icons/im";
-import { BsBagCheckFill } from "react-icons/bs";
+import { AiFillTag } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { BsBellFill } from "react-icons/bs";
 import { FaCogs } from "react-icons/fa";
@@ -33,7 +33,7 @@ const navigation = [
   {
     name: "Product ",
     to: "/dashboard/checkout",
-    icon: BsBagCheckFill,
+    icon: AiFillTag,
     current: false,
   },
 
