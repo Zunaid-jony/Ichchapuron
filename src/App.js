@@ -11,6 +11,10 @@ import AddCustomaer from "./dashboard/Customer/AddCustomaer";
 import CustomarTwo from "./dashboard/Customer/CustomarTwo";
 import Product from "./dashboard/Product/Product";
 import AddProdcut from "./dashboard/Product/AddProdcut";
+import Order from "./dashboard/Order/Order";
+import AddOrder from "./dashboard/Order/AddOrder";
+import Invoice from "./dashboard/Invoice/Invoice";
+import AddInvoice from "./dashboard/Invoice/AddInvoice";
 
 function App() {
   return (
@@ -47,6 +51,22 @@ function App() {
             <Route
               path="addProduct"
               element={<AddProdcut></AddProdcut>}
+            ></Route>
+            <Route
+              path="order"
+              element={<Order></Order>}
+            ></Route>
+            <Route
+              path="addOrder"
+              element={<AddOrder></AddOrder>}
+            ></Route>
+            <Route
+              path="invoice"
+              element={<Invoice></Invoice>}
+            ></Route>
+            <Route
+              path="addInvoice"
+              element={<AddInvoice></AddInvoice>}
             ></Route>
 
             {/* <Route

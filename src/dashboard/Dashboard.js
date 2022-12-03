@@ -3,12 +3,12 @@ import { Dialog, Menu, Transition } from "@headlessui/react";
 
 import { BiUserCircle } from "react-icons/bi";
 import { MdFavorite } from "react-icons/md";
-import { FaClipboardList } from "react-icons/fa";
+import { FaClipboardList, FaFileInvoice } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { BiGitCompare } from "react-icons/bi";
 import { SiBloglovin } from "react-icons/si";
 import { BiMessageRoundedDetail } from "react-icons/bi";
-import { AiOutlineUsergroupAdd } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineUsergroupAdd } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa";
 import { ImHome } from "react-icons/im";
 import { AiFillTag } from "react-icons/ai";
@@ -36,6 +36,18 @@ const navigation = [
     icon: AiFillTag,
     current: false,
   },
+  {
+    name: "Order ",
+    to: "/dashboard/order",
+    icon: AiOutlineShoppingCart,
+    current: false,
+  },
+  {
+    name: "Invoice ",
+    to: "/dashboard/invoice",
+    icon: FaFileInvoice,
+    current: false,
+  },
 
   // {
   //   name: "My User List",
@@ -43,26 +55,26 @@ const navigation = [
   //   icon: FaUsers,
   //   current: false,
   // },
-  {
-    name: "My Listings",
-    to: "/dashboard/product",
-    icon: FaClipboardList,
-    current: false,
-  },
+  // {
+  //   name: "My Listings",
+  //   to: "/dashboard/product",
+  //   icon: FaClipboardList,
+  //   current: false,
+  // },
 
-  {
-    name: "My Favorite",
-    to: "/dashboard/favorite",
-    icon: MdFavorite,
-    current: false,
-  },
-  { name: "Saved Search", to: "/", icon: FaSearch, current: false },
-  {
-    name: "Compare Listing",
-    to: "/dashboard/compareList",
-    icon: BiGitCompare,
-    current: false,
-  },
+  // {
+  //   name: "My Favorite",
+  //   to: "/dashboard/favorite",
+  //   icon: MdFavorite,
+  //   current: false,
+  // },
+  // { name: "Saved Search", to: "/", icon: FaSearch, current: false },
+  // {
+  //   name: "Compare Listing",
+  //   to: "/dashboard/compareList",
+  //   icon: BiGitCompare,
+  //   current: false,
+  // },
 
   {
     name: "Blog",
