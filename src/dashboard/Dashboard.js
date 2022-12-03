@@ -3,7 +3,7 @@ import { Dialog, Menu, Transition } from "@headlessui/react";
 
 import { BiUserCircle } from "react-icons/bi";
 import { MdFavorite } from "react-icons/md";
-import { FaClipboardList, FaFileInvoice } from "react-icons/fa";
+import { FaClipboardList, FaFacebookMessenger, FaFileInvoice } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { BiGitCompare } from "react-icons/bi";
 import { SiBloglovin } from "react-icons/si";
@@ -13,9 +13,10 @@ import { FaUsers } from "react-icons/fa";
 import { ImHome } from "react-icons/im";
 import { AiFillTag } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
-import { BsBellFill } from "react-icons/bs";
+import { BsBellFill, BsFillCalendarDayFill } from "react-icons/bs";
 import { FaCogs } from "react-icons/fa";
 import { BiChevronDownSquare } from "react-icons/bi";
+import { RiTodoFill } from "react-icons/ri";
 
 import { Link, Outlet } from "react-router-dom";
 
@@ -48,6 +49,18 @@ const navigation = [
     icon: FaFileInvoice,
     current: false,
   },
+  {
+    name: "Todo",
+    to: "/dashboard/todo",
+    icon: RiTodoFill,
+    current: false,
+  },
+  {
+    name: "Calendar",
+    to: "/dashboard/calendar",
+    icon: BsFillCalendarDayFill,
+    current: false,
+  },
 
   // {
   //   name: "My User List",
@@ -76,19 +89,7 @@ const navigation = [
   //   current: false,
   // },
 
-  {
-    name: "Blog",
-    to: "/dashboard/blogs",
-    icon: SiBloglovin,
-    current: false,
-  },
-  {
-    name: "Messages",
-    to: "/dashboard/message",
-    icon: BiMessageRoundedDetail,
-    current: false,
-  },
-  { name: "Submission", to: "/", icon: FaCogs, current: false },
+  
   {
     name: "Home",
     to: "/",
@@ -97,7 +98,9 @@ const navigation = [
   },
 ];
 const secondaryNavigation = [
-  { name: "Settings", to: "/", icon: FaCogs },
+  { name: "Chat",     to: "/dashboard/chat",
+   icon: FaFacebookMessenger },
+
   { name: "Help", to: "/", icon: FaCogs },
   { name: "Privacy", to: "/", icon: FaCogs },
 ];
@@ -249,17 +252,23 @@ const Dashboard = () => {
                     <div className="mt-6 pt-6">
                       <div className="space-y-1 px-2">
                         {secondaryNavigation.map((item) => (
-                          <a
-                            key={item.name}
-                            to={item.to}
-                            className="group flex items-center rounded-md px-2 py-2 text-base font-medium text-cyan-100 hover:bg-cyan-600 hover:text-white"
-                          >
-                            <item.icon
-                              className="mr-4 h-6 w-6 text-cyan-200"
-                              aria-hidden="true"
-                            />
-                            {item.name}
-                          </a>
+                         <Link
+                         key={item.name}
+                         to={item.to}
+                         className={classNames(
+                           item.current
+                             ? "bg-cyan-800 text-white"
+                             : "text-cyan-100 hover:text-white hover:bg-cyan-600",
+                           "group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                         )}
+                         aria-current={item.current ? "page" : undefined}
+                       >
+                         <item.icon
+                           className="mr-4 h-6 w-6 flex-shrink-0 text-cyan-200"
+                           aria-hidden="true"
+                         />
+                         {item.name}
+                       </Link>
                         ))}
                       </div>
                     </div>
@@ -318,18 +327,25 @@ const Dashboard = () => {
               <div className="mt-6 pt-6">
                 <div className="space-y-1 px-2">
                   {secondaryNavigation.map((item) => (
-                    <a
-                      key={item.name}
-                      to={item.to}
-                      className="group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6 text-cyan-100 hover:bg-cyan-600 hover:text-white"
-                    >
-                      <item.icon
-                        className="mr-4 h-6 w-6 text-cyan-200"
-                        aria-hidden="true"
-                      />
-                      {item.name}
-                    </a>
+                    <Link
+                    key={item.name}
+                    to={item.to}
+                    className={classNames(
+                      item.current
+                        ? "bg-cyan-800 text-white"
+                        : "text-cyan-100 hover:text-white hover:bg-cyan-600",
+                      "group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    <item.icon
+                      className="mr-4 h-6 w-6 flex-shrink-0 text-cyan-200"
+                      aria-hidden="true"
+                    />
+                    {item.name}
+                  </Link>
                   ))}
+                  <p>jjjjjjjjj</p>
                 </div>
               </div>
             </nav>

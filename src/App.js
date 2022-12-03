@@ -15,6 +15,9 @@ import Order from "./dashboard/Order/Order";
 import AddOrder from "./dashboard/Order/AddOrder";
 import Invoice from "./dashboard/Invoice/Invoice";
 import AddInvoice from "./dashboard/Invoice/AddInvoice";
+import { Todo } from "./dashboard/Todo/Todo";
+import Calendar from "./dashboard/Calendar/Calendar";
+import Chat from "./dashboard/Chat/Chat";
 
 function App() {
   return (
@@ -67,6 +70,18 @@ function App() {
             <Route
               path="addInvoice"
               element={<AddInvoice></AddInvoice>}
+            ></Route>
+            <Route
+              path="todo"
+              element={<Todo></Todo>}
+            ></Route>
+            <Route
+              path="calendar"
+              element={<Calendar></Calendar>}
+            ></Route>
+            <Route
+              path="chat"
+              element={<Chat></Chat>}
             ></Route>
 
             {/* <Route
