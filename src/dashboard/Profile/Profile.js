@@ -148,18 +148,18 @@ const Profile = () => {
 
 
                     <p className=" mt-4 font-semibold">Professional Skills</p>
-                    <div class="w-full bg-gray-200 h-1 mb-6">
-  <div className="bg-green-500 h-1" style="width: 25%"></div>
+                    {/* <div class="w-full bg-gray-200 h-1 mb-6">
+  <div class="bg-green-500 h-1" style="width: 25%"></div>
 </div>
-<div className="w-full bg-gray-200 h-1 mb-6">
-  <div className="bg-blue-400 h-1" style="width: 50%"></div>
+<div class="w-full bg-gray-200 h-1 mb-6">
+  <div class="bg-blue-400 h-1" style="width: 50%"></div>
 </div>
-<div className="w-full bg-gray-200 h-1 mb-6">
-  <div className="bg-yellow-500 h-1" style="width: 75%"></div>
+<div class="w-full bg-gray-200 h-1 mb-6">
+  <div class="bg-yellow-500 h-1" style="width: 75%"></div>
 </div>
-<div className="w-full bg-gray-200 h-1">
-  <div className="bg-red-600 h-1" style="width: 100%"></div>
-</div>
+<div class="w-full bg-gray-200 h-1">
+  <div class="bg-red-600 h-1" style="width: 100%"></div>
+</div> */}
 
                 </div>
             </div>
