@@ -101,7 +101,7 @@ const secondaryNavigation = [
   { name: "Chat",     to: "/dashboard/chat",
    icon: FaFacebookMessenger },
 
-  { name: "Help", to: "/", icon: FaCogs },
+  { name: "User Profile", to: "/dashboard/profile", icon: BiUserCircle },
   { name: "Privacy", to: "/", icon: FaCogs },
 ];
 
@@ -345,7 +345,7 @@ const Dashboard = () => {
                     {item.name}
                   </Link>
                   ))}
-                  <p>jjjjjjjjj</p>
+                  // <p>jjjjjjjjj</p>
                 </div>
               </div>
             </nav>

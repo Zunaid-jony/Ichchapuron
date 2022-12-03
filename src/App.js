@@ -18,6 +18,7 @@ import AddInvoice from "./dashboard/Invoice/AddInvoice";
 import { Todo } from "./dashboard/Todo/Todo";
 import Calendar from "./dashboard/Calendar/Calendar";
 import Chat from "./dashboard/Chat/Chat";
+import Profile from "./dashboard/Profile/Profile";
 
 function App() {
   return (
@@ -83,6 +84,11 @@ function App() {
               path="chat"
               element={<Chat></Chat>}
             ></Route>
+            <Route
+              path="profile"
+              element={<Profile></Profile>}
+            ></Route>
+           
 
             {/* <Route
                         path=":products/:id"
