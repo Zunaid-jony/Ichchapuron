@@ -19,6 +19,10 @@ import { Todo } from "./dashboard/Todo/Todo";
 import Calendar from "./dashboard/Calendar/Calendar";
 import Chat from "./dashboard/Chat/Chat";
 import Profile from "./dashboard/Profile/Profile";
+import Login from "./Components/Authentication/Login";
+import Registration from "./Components/Authentication/Registration";
+import ResetPassword from "./Components/Authentication/ResetPassword";
+import ConfirmMail from "./Components/Authentication/ConfirmMail";
 
 function App() {
   return (
@@ -27,6 +31,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/contract" element={<ContractUs></ContractUs>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/Registration" element={<Registration></Registration>}></Route>
+          <Route path="/ResetPassword" element={<ResetPassword></ResetPassword>}></Route>
+
+
+          <Route path="/ConfirmMail" element={<ConfirmMail></ConfirmMail>}></Route>
 
           <Route path="/dashboard" element={<Dashboard></Dashboard>}>
             
