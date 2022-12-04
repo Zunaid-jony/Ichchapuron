@@ -8,7 +8,7 @@ import { FaSearch } from "react-icons/fa";
 import { BiGitCompare } from "react-icons/bi";
 import { SiBloglovin } from "react-icons/si";
 import { BiMessageRoundedDetail } from "react-icons/bi";
-import { AiOutlineShoppingCart, AiOutlineUsergroupAdd } from "react-icons/ai";
+import { AiFillLock, AiFillUnlock, AiOutlineShoppingCart, AiOutlineUsergroupAdd } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa";
 import { ImHome } from "react-icons/im";
 import { AiFillTag } from "react-icons/ai";
@@ -345,7 +345,90 @@ const Dashboard = () => {
                     {item.name}
                   </Link>
                   ))}
-                  // <p>jjjjjjjjj</p>
+
+                      
+                        {/* <p className="text-cyan-100 hover:text-white hover:bg-cyan-600">jjjjjjjjj</p> */}
+
+
+
+
+
+
+
+
+
+
+                        <Menu as="div" className="relative ">
+                  <div>
+                    <Menu.Button className="flex  max-w-xs items-center   hover:bg-cyan-600 
+                     text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 
+                     lg:rounded-md lg:p-2 text-white">
+                      
+                     
+                       
+                        <span className="font-semibold l mr-4 h-6 w-6 flex-shrink-0 text-cyan-200 text-2xl "> <AiFillUnlock></AiFillUnlock> </span>
+                        <span className="font-semibold text-white ">Authentication </span>
+
+                      
+                      {/* <BiChevronDownSquare
+                        className="ml-1 hidden h-5 w-5 flex-shrink-0 text-gray-400 lg:block"
+                        aria-hidden="true"
+                      /> */}
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md
+                     bg-[#17345f] py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            to="/login"
+                            className={classNames(
+                              active ? "hover:bg-cyan-600 rounded-md text-left bg-[#17345f] " : "",
+                              "block px-4 py-2 text-sm text-white"
+                            )}
+                          >
+                            Login
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                      {({ active }) => (
+                          <Link
+                            to="/Registration "
+                            className={classNames(
+                              active ? "hover:bg-cyan-600 rounded-md text-left bg-[#17345f] " : "",
+                              "block px-4 py-2 text-sm text-white"
+                            )}
+                          >
+                            Registration 
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                      {({ active }) => (
+                          <Link
+                            to="/login"
+                            className={classNames(
+                              active ? "hover:bg-cyan-600 rounded-md text-left bg-[#17345f] " : "",
+                              "block px-4 py-2 text-sm text-white"
+                            )}
+                >
+                            Logout
+                          </Link>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
                 </div>
               </div>
             </nav>
