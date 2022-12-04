@@ -1,35 +1,31 @@
-import { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 
 import { BiUserCircle } from "react-icons/bi";
-import { MdFavorite } from "react-icons/md";
+
 import {
-  FaClipboardList,
+
   FaFacebookMessenger,
   FaFileInvoice,
 } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
-import { BiGitCompare } from "react-icons/bi";
-import { SiBloglovin } from "react-icons/si";
-import { BiMessageRoundedDetail } from "react-icons/bi";
+
 import {
   AiFillLock,
   AiFillUnlock,
   AiOutlineShoppingCart,
   AiOutlineUsergroupAdd,
 } from "react-icons/ai";
-import { FaUsers } from "react-icons/fa";
-import { ImHome } from "react-icons/im";
+
+import { ImCross, ImHome } from "react-icons/im";
 import { AiFillTag } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { BsBellFill, BsFillCalendarDayFill } from "react-icons/bs";
-import { FaCogs } from "react-icons/fa";
+
 import { BiChevronDownSquare } from "react-icons/bi";
 import { RiTodoFill } from "react-icons/ri";
 
 import { Link, Outlet } from "react-router-dom";
 
-import { FcTodoList } from "react-icons/fc";
 
 const navigation = [
   {
@@ -76,32 +72,7 @@ const navigation = [
     current: false,
   },
 
-  // {
-  //   name: "My User List",
-  //   to: "/dashboard/users",
-  //   icon: FaUsers,
-  //   current: false,
-  // },
-  // {
-  //   name: "My Listings",
-  //   to: "/dashboard/product",
-  //   icon: FaClipboardList,
-  //   current: false,
-  // },
-
-  // {
-  //   name: "My Favorite",
-  //   to: "/dashboard/favorite",
-  //   icon: MdFavorite,
-  //   current: false,
-  // },
-  // { name: "Saved Search", to: "/", icon: FaSearch, current: false },
-  // {
-  //   name: "Compare Listing",
-  //   to: "/dashboard/compareList",
-  //   icon: BiGitCompare,
-  //   current: false,
-  // },
+  
 
   {
     name: "Home",
@@ -114,47 +85,22 @@ const secondaryNavigation = [
   { name: "Chat", to: "/dashboard/chat", icon: FaFacebookMessenger },
 
   { name: "User Profile", to: "/dashboard/profile", icon: BiUserCircle },
-  { name: "Privacy", to: "/", icon: FaCogs },
+ 
 ];
 
-const cards = [
-  { name: "Account balance", to: "/", icon: FaCogs, amount: "$30,659.45" },
-  // More items...
-];
 
-const transactions = [
-  {
-    id: 1,
-    name: "Payment to Molly Sanders",
-    to: "/",
-    amount: "$20,000",
-    currency: "USD",
-    status: "success",
-    date: "July 11, 2020",
-    datetime: "2020-07-11",
-  },
-  // More transactions...
-];
-const statusStyles = {
-  success: "bg-green-100 text-green-800",
-  processing: "bg-yellow-100 text-yellow-800",
-  failed: "bg-gray-100 text-gray-800",
-};
 
-// useEffect(() => {
-//   window.scrollTo(0, 0);
-// }, []);
+
+
+
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const Dashboard = () => {
-  // useEffect(() => {
-  //   setToken(localStorage.getItem("token"));
-  //   // setEmail(localStorage.getItem("user"));
-
-  // }, [token]);
+ 
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -218,7 +164,7 @@ const Dashboard = () => {
                         onClick={() => setSidebarOpen(false)}
                       >
                         <span className="sr-only">Close sidebar</span>
-                        <FaCogs
+                        <ImCross
                           className="h-6 w-6 text-white"
                           aria-hidden="true"
                         />

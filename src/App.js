@@ -23,6 +23,7 @@ import Login from "./Components/Authentication/Login";
 import Registration from "./Components/Authentication/Registration";
 import ResetPassword from "./Components/Authentication/ResetPassword";
 import ConfirmMail from "./Components/Authentication/ConfirmMail";
+import Listing from "./Components/Header/Footer/Listing";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/contract" element={<ContractUs></ContractUs>}></Route>
+          <Route path="/listing" element={<Listing></Listing> }></Route>
+          <Route path="/about" element={<Listing></Listing> }></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/Registration" element={<Registration></Registration>}></Route>
           <Route path="/ResetPassword" element={<ResetPassword></ResetPassword>}></Route>
@@ -99,23 +102,7 @@ function App() {
               element={<Profile></Profile>}
             ></Route>
            
-
-            {/* <Route
-                        path=":products/:id"
-                        element={<EditProduts item={item}></EditProduts>}
-                      ></Route> */}
-            {/* <Route
-                        path="favorite"
-                        element={<Favorite></Favorite>}
-                      ></Route> */}
-            {/* <Route
-                        path="compareList"
-                        element={<CompareList item={item}></CompareList>}
-                      ></Route> */}
-            {/* <Route
-                        path="message"
-                        element={<Massages></Massages>}
-                      ></Route> */}
+           
           </Route>
         </Routes>
       </BrowserRouter>

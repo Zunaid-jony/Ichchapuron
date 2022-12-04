@@ -33,7 +33,7 @@ const Navigation = () => {
       <div className="flex justify-between items-center  max-w-[1536px] mx-auto px-4 shadow-xl container ">
         <div className="     text-left    flex justify-between">
           <p className="w-full text-3xl font-bold bg-gradient-to-r text-transparent bg-clip-text from-green-500 to-blue-600 hover:from-pink-500 hover:to-yellow-500">
-            DIU SMART
+            <img className="w-14 h-14" src="https://templates.iqonic.design/datum/html/assets/images/logo-dark.png"  alt=""></img>
           </p>
 
           {/* <img className=" w-40 h-16 py-3" src="https://i.ibb.co/7YMsM83/main-Logos-removebg-preview.png" alt="" />{" "} */}
@@ -46,13 +46,11 @@ const Navigation = () => {
           <NavLink to="/contract" className="p-4 hover:text-[#61dafb]">
             Listing
           </NavLink>
-          <NavLink to="/blog" className="p-4 hover:text-[#61dafb]">
-            Blog
-          </NavLink>
-          <NavLink to="/about" className="p-4 hover:text-[#61dafb]">
+         
+          <NavLink to="/listing" className="p-4 hover:text-[#61dafb]">
             About
           </NavLink>
-          <NavLink to="/contact" className="p-4 hover:text-[#61dafb]">
+          <NavLink to="/about" className="p-4 hover:text-[#61dafb]">
             Contact
           </NavLink>
 
